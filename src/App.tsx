@@ -1,5 +1,9 @@
+import { useRoutes } from 'react-router';
+import { routes } from './routes/routes';
+
 const App = () => {
-  return <>helloo</>;
+  const content = useRoutes(routes);
+  return content;
 };
 
 export default App;
