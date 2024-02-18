@@ -12,7 +12,7 @@ function Dashboard() {
             minHeight: 280,
             animation: 'ease-in-out',
           }}
-          className="bg-[#EEF0F8] w-full min-h-[100%]"
+          className="w-full min-h-[100%] flex justify-center "
         >
           <Outlet />
         </div>

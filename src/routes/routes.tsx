@@ -1,5 +1,6 @@
 import { RouteObject } from "react-router";
 import ProtectedLayout from "../components/layout/ProtectedLayout"
+import Categotry from "../pages/category";
 export const routes: RouteObject[] = [
   {
     path: '/',
@@ -8,7 +9,7 @@ export const routes: RouteObject[] = [
       {
         path : "category" ,
         index: true,
-        // element: <DashboardPage />,
+        element: <Categotry/>,
       },
     ],
   },
