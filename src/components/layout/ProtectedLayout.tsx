@@ -1,11 +1,22 @@
 import { Outlet } from 'react-router';
 import Header from '../common/header';
+import { useAppSelector } from '../../store/hook';
+import { selectThemeState } from '../../store/theme';
+// import SideBar from '../common/sideBar';
 
 function Dashboard() {
+  const selectTheme = useAppSelector(selectThemeState);
+  const darkMode = selectTheme.theme;
+  console.log('====================================');
+  console.log(darkMode);
+  console.log('====================================');
   return (
-    <div className="w-full min-h-[100%] relative">
-      <div className="hidden md:hidden xl:block">{/* <SideBar /> */}</div>
-      <div className="mr-[0px] xl:ml-[250px]">
+    <div
+      className={`${
+        darkMode ? 'bg-gray-800' : 'bg-[#FFF]'
+      } w-full min-h-[100%]`}
+    >
+      <div className="">
         <Header />
         <div
           style={{
