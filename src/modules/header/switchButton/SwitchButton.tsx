@@ -3,13 +3,16 @@ import './style.css';
 import { useTranslation } from 'react-i18next';
 import { useAppSelector } from '../../../store/hook';
 import { selectThemeState } from '../../../store/theme';
+import { selectDirectionState } from '../../../store/languageDirection';
 
 const SwitchButton: FunctionComponent = () => {
   const select = useAppSelector(selectThemeState);
   const darkMode = select.theme;
+  const selectDirection = useAppSelector(selectDirectionState);
   const { t } = useTranslation();
   return (
     <div
+      dir={selectDirection === 'fa' ? 'ltr' : 'ltr'}
       className={`w-[70%] pl-1 flex xl:h-[50px] ${
         darkMode ? 'bg-gray-600' : 'bg-[#e5e5e5]'
       } flex-row justify-center items-center rounded-[8px] auto-rows-max`}

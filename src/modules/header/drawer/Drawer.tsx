@@ -3,6 +3,7 @@ import { IoSettingsOutline } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';
 import { setTheme } from '../../../store/theme';
 import { useTranslation } from 'react-i18next';
+import { setDirection } from '../../../store/languageDirection';
 
 const Drawer: React.FC = () => {
   const [visible, setVisible] = useState(false);
@@ -28,9 +29,7 @@ const Drawer: React.FC = () => {
 
   const handleChange = (event: { target: { value: string } }) => {
     setSelectedValue(event.target.value);
-    console.log('====================================');
-    console.log(selectedValue, 'selected');
-    console.log('====================================');
+    dispatch(setDirection(selectedValue));
     i18n.changeLanguage(selectedValue);
   };
 
