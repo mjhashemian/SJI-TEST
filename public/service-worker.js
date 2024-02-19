@@ -2,6 +2,7 @@ const CACHE_NAME = 'sji-chach-v1';
 const urlsToCache = [
   '/',
   '/index.html',
+  
 ];
 
 self.addEventListener('install', (event) => {

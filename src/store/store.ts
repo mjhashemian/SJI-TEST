@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import ThemeSlice from './theme';
 import DirectionSlice from './languageDirection';
+import UserNameSlice from './userName';
 export const store = configureStore({
   reducer: {
     ThemeSlice,
     DirectionSlice,
+    UserNameSlice,
   },
 });
 
